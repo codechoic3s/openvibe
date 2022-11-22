@@ -1,21 +1,27 @@
 const { Bot } = require('grammy')
 
-const webAppUrlad = 'https://box.codechoic3s.ml/admin/';
-const webAppUrl = 'https://box.codechoic3s.ml/mail/';
+const webAppUrl = 'https://openvibe.codechoic3s.ml/';
 
 const bot = new Bot('5823745441:AAHgLomjQ-iHPs85VS_Utl2OIp2zImB5s2U');
 
-bot.on("message:text", (ctx) => {
-    if(ctx.message.text == "/start") {
-        bot.api.sendMessage(ctx.chat.id, 'button', {
-            reply_markup: {
-                inline_keyboard: [
-                    [{text: "Mail", web_app: {url: webAppUrl}}],
-                    [{text: "Admin", web_app: {url: webAppUrlad}}]
-                ]
-            }
-        })
-    }
+bot.command("start", (ctx) => {
+    bot.api.sendMessage(ctx.chat.id, 'OpenVibe Bot', {
+        reply_markup: {
+            inline_keyboard: [
+                [{text: "Open app", web_app: {url: webAppUrl}}],
+            ]
+        }
+    })
 });
+
+bot.command("mail", (ctx) => {
+    bot.api.sendMessage(ctx.chat.id, 'button', {
+        reply_markup: {
+            inline_keyboard: [
+                [{text: "Open app", web_app: {url: 'https://box.codechoic3s.ml/'}}],
+            ]
+        }
+    })
+})
 
 bot.start();
