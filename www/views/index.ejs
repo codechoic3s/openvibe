@@ -9,16 +9,39 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
-    <title>Document</title>
+    <title>OpenVibe</title>
 </head>
 <body>
+    <div class="logo">
+        <img src="img/logo.png">
+    </div>
     <div class="search">
         <input id="search" placeholder="Search" type="text">
         <svg id="search-ic" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M20.625 22.375L13.625 15.375C13 15.875 12.2812 16.2708 11.4688 16.5625C10.6562 16.8542 9.79167 17 8.875 17C6.60417 17 4.6825 16.2137 3.11 14.6412C1.53667 13.0679 0.75 11.1458 0.75 8.875C0.75 6.60417 1.53667 4.68208 3.11 3.10875C4.6825 1.53625 6.60417 0.75 8.875 0.75C11.1458 0.75 13.0679 1.53625 14.6412 3.10875C16.2137 4.68208 17 6.60417 17 8.875C17 9.79167 16.8542 10.6562 16.5625 11.4688C16.2708 12.2812 15.875 13 15.375 13.625L22.4062 20.6562C22.6354 20.8854 22.75 21.1667 22.75 21.5C22.75 21.8333 22.625 22.125 22.375 22.375C22.1458 22.6042 21.8542 22.7188 21.5 22.7188C21.1458 22.7188 20.8542 22.6042 20.625 22.375ZM8.875 14.5C10.4375 14.5 11.7658 13.9533 12.86 12.86C13.9533 11.7658 14.5 10.4375 14.5 8.875C14.5 7.3125 13.9533 5.98417 12.86 4.89C11.7658 3.79667 10.4375 3.25 8.875 3.25C7.3125 3.25 5.98417 3.79667 4.89 4.89C3.79667 5.98417 3.25 7.3125 3.25 8.875C3.25 10.4375 3.79667 11.7658 4.89 12.86C5.98417 13.9533 7.3125 14.5 8.875 14.5Z" fill="black"/>
         </svg>            
     </div>
-    <audio controls preload="metadata" src="music/YABØII Take me to Church.mp3"></audio>
+
+    <div class="player">
+        <img id="logo" src="https://i.scdn.co/image/ab67616d0000b27388b6941573eaaaca30a9ca50">
+        <div>
+            <h2 id="p-name">Session</h2>
+            <h3 id="p-artist">Delp, YABØII</h3>
+        </div>
+        <div class="player-controls">
+            <svg id="player-play" onclick="playerPlay()" width="19" height="22" viewBox="0 0 19 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.48192 0.815053L18.4069 10.1238C19.0977 10.5037 19.0977 11.4963 18.4069 11.8762L1.48192 21.1849C0.815467 21.5515 9.86379e-07 21.0693 1.01963e-06 20.3087L1.83342e-06 1.69127C1.86667e-06 0.930667 0.815466 0.448505 1.48192 0.815053Z" fill="white"/>
+            </svg>
+            <svg id="player-pause" onclick="playerStop()" style="display: none;" width="22" height="22" viewBox="0 -1 15 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M0 1.22857V15.9714C0 16.381 0.245714 17.2 1.22857 17.2H2.45714C2.86667 17.2 3.68571 16.9543 3.68571 15.9714V1.22857C3.68571 0.819048 3.44 0 2.45714 0H1.22857C0.819048 0 0 0.245714 0 1.22857ZM8.59998 1.22857V15.9714C8.59998 16.381 8.84569 17.2 9.82855 17.2H11.0571C11.4666 17.2 12.2857 16.9543 12.2857 15.9714V1.22857C12.2857 0.819048 12.04 0 11.0571 0H9.82855C9.41903 0 8.59998 0.245714 8.59998 1.22857Z" fill="white"/>
+            </svg>                               
+            <svg id="player-next" onclick="playerNext()" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.48192 0.815053L18.4069 10.1238C19.0977 10.5037 19.0977 11.4963 18.4069 11.8762L1.48192 21.1849C0.815465 21.5515 -9.2097e-07 21.0693 -8.87723e-07 20.3087L-7.39278e-08 1.69127C-4.06808e-08 0.930667 0.815464 0.448505 1.48192 0.815053Z" fill="white"/>
+                <path d="M21 -4.37114e-08L20 -8.74228e-08C19.4477 -1.11564e-07 19 0.447716 19 1L19 21C19 21.5523 19.4477 22 20 22L21 22C21.5523 22 22 21.5523 22 21L22 1C22 0.447715 21.5523 -1.95703e-08 21 -4.37114e-08Z" fill="white"/>
+            </svg>
+        </div>
+    </div>
+    <audio id="a-player" src="music/Delp Session.mp3"></audio>
     <script src="script.js"></script>
 </body>
 </html>
