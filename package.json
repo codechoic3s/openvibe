@@ -1,0 +1,35 @@
+{
+  "name": "openvibe",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Music service",
+  "scripts": {
+    "start": "nodemon ./bin/www",
+    "dev": "set DEBUG=myapp:* & npm start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codechoic3s/openvibe.git"
+  },
+  "keywords": [
+    "music",
+    "service",
+    "openvibe"
+  ],
+  "author": "codechoic3s team",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/codechoic3s/openvibe/issues"
+  },
+  "homepage": "https://github.com/codechoic3s/openvibe",
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "^4.3.4",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1",
+    "nodemon": "^2.0.20"
+  }
+}
