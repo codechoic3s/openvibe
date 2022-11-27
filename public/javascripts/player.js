@@ -23,14 +23,21 @@ let player = {
       ]
 }
 
-addEventListener("load", (event) => {   
-    player.controls.volume.value = 30; 
+addEventListener("load", (event) => {
+    player.controls.volume.value = cookieGet('player-value');
+    if(player.controls.volume.value == null){
+        player.controls.volume.value = 20;
+        cookieSet('player-value', 20);
+    }
+
+    player.audio.volume = player.controls.volume.value / 100;
     player.controls.volume.style.setProperty('--value', player.controls.volume.value);
     player.controls.volume.style.setProperty('--min', player.controls.volume.min == '' ? '0' : player.controls.volume.min);
     player.controls.volume.style.setProperty('--max', player.controls.volume.max == '' ? '100' : player.controls.volume.max);
     player.controls.volume.addEventListener('input', () => {
         player.controls.volume.style.setProperty('--value', player.controls.volume.value);
         player.audio.volume = player.controls.volume.value / 100;
+        cookieSet('player-value', player.controls.volume.value);
     });
     loadTrack(0);
 });
