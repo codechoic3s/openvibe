@@ -24,10 +24,6 @@ let player = {
 }
 
 addEventListener("load", (event) => {   
-    loadTrack(0);
-});
-
-function loadTrack(index){
     player.controls.volume.value = 30; 
     player.controls.volume.style.setProperty('--value', player.controls.volume.value);
     player.controls.volume.style.setProperty('--min', player.controls.volume.min == '' ? '0' : player.controls.volume.min);
@@ -36,6 +32,10 @@ function loadTrack(index){
         player.controls.volume.style.setProperty('--value', player.controls.volume.value);
         player.audio.volume = player.controls.volume.value / 100;
     });
+    loadTrack(0);
+});
+
+function loadTrack(index){
     player.audio.src = 'music/'+player.track_list[index].path;
     player.audio.load();
     

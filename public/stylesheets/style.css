@@ -24,3 +24,9 @@ header {
   width: 100%;
   height: 60px;
 }
+
+.logo img {
+  padding: 25px;
+  width: calc(115px * 2);
+  height: calc(25px * 2);
+}
