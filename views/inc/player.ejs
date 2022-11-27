@@ -1,0 +1,33 @@
+<div class="player-bar">
+    <div class="player-info-wrapper">
+        <div class="cover-image">
+            <img src="https://i.scdn.co/image/ab67616d0000b27388b6941573eaaaca30a9ca50">      
+        </div>
+        <div class="player-info">
+            <span id="player-title" class="title">Session</span>
+            <span id="player-subtitle" class="subtitle">Delp, YABØII</span>
+        </div>
+    </div>
+    <div class="player-controls">
+
+        <button title="Mute/Unmute">
+            <svg id="player-b-volume" aria-label="Mute" onclick="playerMute()" width="24" height="24" viewBox="0 0 24 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18 12.0001C18 13.8034 16.6045 15.7898 14.9791 16.6656C14.5051 16.921 14 16.5296 14 15.9912V15.9912C14 15.6221 14.2473 15.3055 14.5762 15.1379C15.714 14.5581 16.5 13.3726 16.5 12C16.5 10.6261 15.7124 9.44704 14.5728 8.86344C14.2453 8.6957 14 8.37946 14 8.01144V8.01144C14 7.47171 14.5063 7.07939 14.9813 7.33568C16.6057 8.21209 18 10.1975 18 12.0001ZM10.3516 5.4038C11.0009 4.85083 12 5.31227 12 6.16513V17.8349C12 18.6877 11.0009 19.1492 10.3516 18.5962L6.44025 15.2652C6.25935 15.1111 6.0295 15.0265 5.79189 15.0265H4C3.44771 15.0265 3 14.5788 3 14.0265V9.97352C3 9.42123 3.44772 8.97352 4 8.97352H5.79189C6.0295 8.97352 6.25935 8.88891 6.44025 8.73484L10.3516 5.4038ZM21 12C21 15.8315 18.357 19.0337 14.8054 19.8567C14.3822 19.9548 14 19.6163 14 19.1819V19.1819C14 18.8233 14.2643 18.523 14.6138 18.4429C17.6428 17.7486 19.5 15.3316 19.5 12.0001C19.5 8.66851 17.6428 6.25155 14.6138 5.55725C14.2643 5.47714 14 5.17677 14 4.81818V4.81818C14 4.38375 14.3822 4.0452 14.8054 4.14328C18.357 4.96637 21 8.16847 21 12Z" fill="white"/>
+            </svg>
+        </button>
+        <input id="player-volume" class="player-volume" type="range">
+        <button title="Play/Stop">
+            <svg aria-label="Play" id="player-play" onclick="playerPlay()" width="28" height="28" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.49614 4.85494L17.4806 11.1318C18.1524 11.5157 18.1524 12.4843 17.4806 12.8682L6.49614 19.1451C5.82948 19.526 5 19.0446 5 18.2768L5 5.72318C5 4.95536 5.82948 4.47399 6.49614 4.85494Z" fill="white"/>
+            </svg> 
+        </button>
+        
+        <button title="Next track">
+            <svg id="player-next" onclick="playerNext()" width="24" height="24" viewBox="0 0 24 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.49847 4.86163L16.4054 11.1331C17.0741 11.5176 17.0741 12.4824 16.4054 12.8669L5.49847 19.1384C4.83181 19.5217 4 19.0405 4 18.2715L4 5.72853C4 4.95951 4.83181 4.47829 5.49847 4.86163Z" fill="white"/>
+                <path d="M19 4L18.913 4C18.3607 4 17.913 4.44771 17.913 5L17.913 19C17.913 19.5523 18.3607 20 18.913 20L19 20C19.5523 20 20 19.5523 20 19L20 5C20 4.44771 19.5523 4 19 4Z" fill="white"/>
+            </svg>
+        </button>
+        </div>
+    </div>
+    <script src="javascripts/player.js"></script>
