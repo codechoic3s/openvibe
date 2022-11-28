@@ -206,8 +206,4 @@ input[type=range].player-volume::-ms-fill-lower {
         left: calc(50% - 95% / 2);
         width: 95%;
     }
-
-    .player-volume {
-        display: none;
-    }
 }
